@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/exercise/exercise",
+    "pages/companion/companion"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#CCFFFF",
+    "navigationBarTitleText": "52Hz",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "沙滩小巢",
+        "iconPath": "icon/1.icon.png",
+        "selectedIconPath": "icon/2.png"
+      },
+      {
+        "pagePath": "pages/exercise/exercise",
+        "text": "海浪运动",
+        "iconPath": "icon/3.png",
+        "selectedIconPath": "icon/4.png"
+      },
+      {
+        "pagePath": "pages/companion/companion",
+        "text": "海底漂流",
+        "iconPath": "icon/5.png",
+        "selectedIconPath": "icon/6.png"
+      }
+    ],
+    "color": "#FC0CB",
+    "selectedColor": "yellow",
+    "backgroundColor": "#FFCCCC"
+  },
+  "sitemapLocation": "sitemap27.json"
+}

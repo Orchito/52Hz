@@ -1,0 +1,8 @@
+
+
+  <view class="title">欢迎来到 52Hz</view>
+  <view class="show-iconView">
+  <image style="width: 30px; height: 30px" class="show-iconImage" animation="{{animation}}" src="../../images/music.png"></image>
+
+<image  src="../../images/whale.jpg"></image>
+</view>
