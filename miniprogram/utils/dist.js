@@ -1,29 +1,39 @@
-function toRadians(d) { return d * Math.PI / 180; }
-
-/**
- * 计算坐标之间的距离
- * @param  {[type]} lat1 [description]
- * @param  {[type]} lng1 [description]
- * @param  {[type]} lat2 [description]
- * @param  {[type]} lng2 [description]
- * @return {[type]}      [description]
- */
-function getDistance(lat1, lng1, lat2, lng2) {
-  let dis = 0;
-  let radLat1 = toRadians(lat1);
-  let radLat2 = toRadians(lat2);
-  let deltaLat = radLat1 - radLat2;
-  let deltaLng = toRadians(lng1) - toRadians(lng2);
-  dis = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(deltaLat / 2), 2) + Math.cos(radLat1) * Math.cos(radLat2) * Math.pow(Math.sin(deltaLng / 2), 2)));
-  return dis * 6378137;
+//得到时间格式
+const formatDate = date => {
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+  return [year,month, day].map(formatNumber).join('-') 
+ 
 }
-
-function distance(coords) {
-  let lens = 0;
-  for (var i = 0; i < coords.length - 1; i++) {
-    lens += getDistance(...coords[i], ...coords[i + 1]);
+ 
+const formatNumber = n => {
+  n = n.toString()
+  return n[1] ? n : '0' + n
+}
+//todate默认参数是当前日期，可以传入对应时间 todate格式为2018-10-05
+function getDates(days, todate) {
+  var dateArry = [];
+  for (var i = 0; i < days; i++) {
+    var dateObj = dateLater(todate, i);
+    dateArry.push(dateObj)
   }
-  return lens;
+  return dateArry;
 }
-
-module.exports = distance;
+function dateLater(dates, later) {
+  let dateObj = {};
+  let show_day = new Array('周日', '周一', '周二', '周三', '周四', '周五', '周六');
+  let date = new Date(dates);
+  date.setDate(date.getDate() + later);
+  let day = date.getDay();
+  let yearDate = date.getFullYear();
+  let month = ((date.getMonth() + 1) < 10 ? ("0" + (date.getMonth() + 1)) : date.getMonth() + 1);
+  let dayFormate = (date.getDate() < 10 ? ("0" + date.getDate()) : date.getDate());
+  dateObj.time =  yearDate+'-'+ month + '-' + dayFormate;
+  dateObj.week = show_day[day];
+  return dateObj;
+}
+module.exports = {
+  formatDate: formatDate,
+  getDates: getDates
+}

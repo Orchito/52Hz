@@ -1,4 +1,43 @@
 /**index.wxss**/
 
-
-
+.title{
+  color:bisque;
+  display:flex;
+  font-size:100rpx;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-family:STXingkai;
+}
+.breath{
+  border-radius:30rpx;
+  width: 150rpx;
+  height: 150rpx;
+  margin-top: 80rpx;
+  margin-left: 55rpx;
+  float: left;
+  background:  -webkit-linear-gradient(left,rgb(240, 183, 193),rgb(241, 169, 181),rgb(253, 152, 169))
+}
+.breath-text{
+  font-family:STFangsong;
+  color:grey;
+  font-weight:bold;
+  font-size:55rpx;
+}
+.info{
+  margin-top:40rpx;
+  background:linear-gradient(to right,#ead6ee,#f5abd3,#e9eeee,#b6bbbb);
+}
+.indexwhale{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+.vicetitle{
+  font-family:STXingkai;
+  color:rgb(74, 29, 180);
+  font-size:50rpx;
+}

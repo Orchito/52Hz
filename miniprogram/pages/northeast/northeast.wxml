@@ -1,0 +1,15 @@
+<view class='wrapper'>
+  <view class='welcome'>大东北欢迎你回家</view>
+  <image class='backdb'  src='../../images/dongbei.jpg'></image>
+</view>
+<button  bindtap='imageUpload' class='uppicture' size='mini'>上传图片</button>
+<button  bindtouchstart="startRecode" bindtouchend="endRecode" class="cxbtn" class='upmedia' size='mini'>上传音频</button>
+<button  bindtap='videoUpload' class='upvideo' size='mini'>上传视频</button>
+<swiper>
+  <swiper-item wx:for="{{imgUrls}}">
+    <image src='{{item}}' width="335" height="150" mode='widthFix' class='img' ></image>
+  </swiper-item>
+</swiper>
+
+
+ 

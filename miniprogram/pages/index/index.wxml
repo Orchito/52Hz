@@ -1,8 +1,17 @@
-
-
-  <view class="title">欢迎来到 52Hz</view>
-  <view class="show-iconView">
-  <image style="width: 30px; height: 30px" class="show-iconImage" animation="{{animation}}" src="../../images/music.png"></image>
-
-<image  src="../../images/whale.jpg"></image>
+ <view class="title">欢迎来到 52Hz</view>
+ <view class="wxml">
+	 <view class="vicetitle">今天的52HZ是：{{date}}</view>
 </view>
+  <view class="show-iconView">
+  <image style="width: 30px; height: 30px" class="show-iconImage" animation="{{animation}}" src="../../icon/music.png"></image>
+
+<image  src="../../images/whale.jpg" class="indexwhale"></image>
+</view>
+<button  class='info' wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">我可以知道你的频率嘛？</button>
+<view wx:else>请升级微信版本</view>
+
+<navigator  url="/pages/breath/breath"><view class="breath"><text class="breath-text">开始breath</text></view></navigator>
+<view></view>
+<view></view>
+<view></view>
+<view></view>

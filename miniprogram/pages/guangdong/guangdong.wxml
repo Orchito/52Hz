@@ -1,0 +1,29 @@
+<view class='wrapper'>
+  <view class='welcome'>“返屋企饮汤啦~”</view>
+  <image class='backdb'  src='../../images/guangdong1.jpg'></image>
+</view>
+<button  bindtap='imageUpload' class='uppicture' size='mini'>上传图片</button>
+<button  bindtouchstart="startRecode" bindtouchend="endRecode" class="cxbtn" class='upmedia' size='mini'>上传音频</button>
+<button  bindtap='videoUpload' class='upvideo' size='mini'>上传视频</button>
+<swiper>
+  <swiper-item wx:for="{{imgUrls}}">
+    <image src='{{item}}' width="335" height="150" mode='widthFix' class='img' ></image>
+  </swiper-item>
+</swiper>
+
+<view>
+<view><textarea class="zhuti" type="textarea" name="Label" confirm-type="done" bindinput="liuyan"></textarea></view>
+  
+  <button type="primary" bindtap="addLabel">留言</button>
+</view>
+<block wx:for="{{logs}}" wx:key="key" name="block">
+  <view class="userinfo">
+  <view > 
+    <image class="userinfo-avatar" src="{{item.pic}}"></image>
+  </view>
+  <text class="name">{{item.name}}说:</text></view>
+  <text class="text">{{item.label}}</text>
+  <view>
+  <text class="time">{{item.date}}</text>
+  </view>
+</block>

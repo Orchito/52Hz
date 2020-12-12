@@ -1,9 +1,32 @@
 {
+  "cloud":true,
   "pages": [
     "pages/index/index",
     "pages/exercise/exercise",
-    "pages/companion/companion"
+    "pages/companion/companion",
+    "utils/util.js",
+    "utl.js"
   ],
+  "subPackages": [
+    {
+      "root":"miniprogram/pages",
+      "pages":[
+        "pages/breath",
+        "pages/exercise",
+        "pages/guangdong",
+        "pages/index",
+        "pages/northeast",
+        "pages/shanghai"
+      ]
+
+
+    }
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
   "window": {
     "navigationBarBackgroundColor": "#CCFFFF",
     "navigationBarTitleText": "52Hz",
@@ -16,13 +39,13 @@
         "pagePath": "pages/index/index",
         "text": "沙滩小巢",
         "iconPath": "icon/1.icon.png",
-        "selectedIconPath": "icon/2.png"
+        "selectedIconPath": "icon/7.png"
       },
       {
         "pagePath": "pages/exercise/exercise",
         "text": "海浪运动",
-        "iconPath": "icon/3.png",
-        "selectedIconPath": "icon/4.png"
+        "iconPath": "icon/8.png",
+        "selectedIconPath": "icon/9.png"
       },
       {
         "pagePath": "pages/companion/companion",

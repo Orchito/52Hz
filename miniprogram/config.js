@@ -25,3 +25,22 @@ const TX_MAP_KEY = 'MECBZ-DH2W6-MTUSC-MV3E2-3HXYZ-RRFXI';//腾讯地图开发者
 module.exports = {
   domain, qiniuDomain, bgImage, alianceKey, TX_MAP_KEY, region
 }
+const formatTime = date => {
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+  const hour = date.getHours()
+  const minute = date.getMinutes()
+  const second = date.getSeconds()
+
+  return [year, month, day].map(formatNumber).join('-') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+}
+
+const formatNumber = n => {
+  n = n.toString()
+  return n[1] ? n : '0' + n
+}
+
+module.exports = {
+  formatTime: formatTime
+}
