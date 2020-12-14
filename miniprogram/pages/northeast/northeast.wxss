@@ -1,0 +1,27 @@
+.backdb{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+.welcome{
+  font-size:50rpx;
+  text-align: center;
+  line-height:1.4;
+  opacity:0.65;
+  font-weight:bold;
+}
+.uppicture{
+  margin-top:40rpx;
+  background:linear-gradient(#ccfbff,#ef96c5);
+}
+.upmedia{
+  margin-top:40rpx;
+  background:linear-gradient(to right,#ead6ee,#a0f1ea);
+}
+.upvideo{
+  margin-top:40rpx;
+  background:linear-gradient(to right,#ead6ee,#ef96c5,#ccfbff,#a0f1ea);
+}

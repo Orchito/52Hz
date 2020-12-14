@@ -1,0 +1,55 @@
+<view class="container">
+  <view class="page-body">
+    <view class="page-section page-section-spacing">
+      <view class="text-box" scroll-y="true" scroll-top="{{scrollTop}}">
+        <text class="text">{{text}}</text>
+      
+      <button disabled="{{!canAdd}}" bindtap="add">开始呼吸疗程指导</button>
+      <button disabled="{{!canRemove}}" bindtap="remove">回到上一步</button>
+      <image class='ballon'  src='../../images/breath-back2.jpg'></image>
+   
+
+<view class="container timer {{isRuning ? 'timer--runing': ''}}">
+	<view class="timer_main">
+		 <view class="timer_time-wrap">
+		 		<view class="timer_progress_mask"></view>
+		 		<view class="timer_progress timer_left">
+		 			<view class="timer_circle timer_circle--left" style="transform: rotate({{leftDeg}}deg);"></view>
+           </view>
+		 		<view class="timer_progress timer_right">
+		 			<view class="timer_circle timer_circle--right" style="transform: rotate({{rightDeg}}deg);"></view>
+		 		</view>
+			 	<text wx:if="{{!completed}}" class="timer_time">{{remainTimeText}}</text>
+			 	<text 
+			 		wx:if="{{isRuning}}" 
+			 		animation="{{nameAnimation}}" 
+			 		class="timer_taskName">{{taskName}}{{completed ? '已完成！' : '中'}}</text>
+		 		<image 
+		 			wx:if="{{completed}}" 
+		 			class="timer_done" 
+		 			src="../../image/complete.png"></image>
+     </view>
+		 <input 
+		 	type="text" 
+		 	placeholder-style="text-align:center" 
+		 	class="timer_inputname" 
+		 	bindinput="changeLogName"></input>
+	</view>
+	
+	<view class="timer_footer">
+	  <view
+	  	bindtap="startTimer" 
+	  	data-type="work" 
+	  	class="timer_ctrl {{isRuning && timerType == 'rest' ? 'hide' : ''}}" >{{isRuning ? '完成': '开始冥想'}}</view>
+
+	  <view 
+	  	bindtap="startTimer" 
+	  	data-type="rest" 
+	  	class="timer_ctrl {{isRuning && timerType == 'work' ? 'hide' : ''}}" >{{isRuning ? '完成': '完成冥想'}}</view>
+	</view>
+</view>
+</view>
+</view>
+  </view>
+ </view>
+ 

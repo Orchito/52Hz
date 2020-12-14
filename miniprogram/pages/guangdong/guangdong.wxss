@@ -1,0 +1,115 @@
+.backdb{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+.welcome{
+  font-size:50rpx;
+  text-align: center;
+  line-height:1.4;
+  opacity:0.65;
+  font-weight:bold;
+}
+.uppicture{
+  margin-top:40rpx;
+  background:linear-gradient(#ccfbff,#ef96c5);
+}
+.upmedia{
+  margin-top:40rpx;
+  background:linear-gradient(to right,#ead6ee,#a0f1ea);
+}
+.upvideo{
+  margin-top:40rpx;
+  background:linear-gradient(to right,#ead6ee,#ef96c5,#ccfbff,#a0f1ea);
+}
+/*留言*/
+.zhuti{
+  display: flex;
+  font-size: 20px;
+  height: 80px;
+  width: 100%;
+  border: 1px solid #d0d0d0;  
+  border-radius: 10rpx;  
+}
+.text{
+  font-size:20px;
+  border: 1px solid #d0d0d0;  
+  border-radius: 10rpx; 
+  width: 100%;
+  text-overflow:ellipsis;
+  display: -webkit-box;
+  word-break: break-all;
+}
+.name{
+  font-size:20px;
+}
+.block{
+  display: flex;
+  flex-direction:row-reverse;
+}
+.delet{
+  color:greenyellow;
+  size:10px;
+}
+.userinfo{
+  margin-top: 40rpx;
+  height: 140rpx;
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 300ms ease;
+}
+
+.userinfo-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: white;
+}
+
+.userinfo-avatar:after {
+  border: none;
+}
+
+.userinfo-nickname {
+  font-size: 32rpx;
+  color: #007aff;
+  background-color: white;
+  background-size: cover;
+}
+
+.userinfo-nickname::after {
+  border: none;
+}
+
+
+.userinfo {  
+  position: relative;  
+  width: 750rpx;  
+  height: 320rpx;  
+  color: black;  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+}  
+.userinfo-avatar {  
+  overflow:hidden;  
+  display: block;  
+  width: 160rpx;  
+  height: 160rpx;  
+  margin: 20rpx;  
+  margin-top: 50rpx;  
+  border-radius: 50%;  
+  border: 2px solid #fff;  
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);  
+}  
